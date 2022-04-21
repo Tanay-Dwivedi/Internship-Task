@@ -54,10 +54,9 @@ public class TeachersListScreen extends AppCompatActivity {
                 for(int i = 0; i< response.length(); i++) {
                     try {
                         JSONObject jsonObject = response.getJSONObject(i);
-                        String naming = jsonObject.getString("name");
-                        String subject = jsonObject.getString("subjects");
-                        String qualifi = jsonObject.getString("qualification");
-                        String res = subject + " - " + qualifi;
+                        String naming = jsonObject.getString("name").replace("[","").replace("]","");
+                        String subject = jsonObject.getString("subjects").replace("[","").replace("]","");
+                        String qualifi = jsonObject.getString("qualification").replace("[","").replace("]","");
                         String pic = jsonObject.getString("profileImage");
 
                         Teacher teacher = new Teacher(naming, subject, qualifi, pic);

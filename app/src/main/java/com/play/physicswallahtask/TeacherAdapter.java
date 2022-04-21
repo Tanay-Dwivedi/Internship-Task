@@ -36,7 +36,8 @@ public class TeacherAdapter extends RecyclerView.Adapter<TeacherAdapter.TeacherH
 
         Teacher teacher = teachersList.get(position);
         holder.namingTeacher.setText(teacher.getName());
-        holder.eduAndQualificationOfTheTeacher.setText(teacher.getQualification());
+        holder.subjOfTheTeacher.setText(teacher.getSubject());
+        holder.qualifiOfTheTeacher.setText(teacher.getQualification());
         Glide.with(context).load(teacher.getProfilePic()).into(holder.pictureOfTeacher);
 
     }
@@ -49,14 +50,15 @@ public class TeacherAdapter extends RecyclerView.Adapter<TeacherAdapter.TeacherH
     public class TeacherHolder extends RecyclerView.ViewHolder {
 
         ImageView pictureOfTeacher;
-        TextView namingTeacher, eduAndQualificationOfTheTeacher;
+        TextView namingTeacher, subjOfTheTeacher, qualifiOfTheTeacher;
 
         public TeacherHolder(@NonNull View itemView) {
             super(itemView);
 
             pictureOfTeacher = itemView.findViewById(R.id.picOfTeacher);
             namingTeacher = itemView.findViewById(R.id.nameOfTheTeacher);
-            eduAndQualificationOfTheTeacher = itemView.findViewById(R.id.subjectOfTheTeacher);
+            subjOfTheTeacher = itemView.findViewById(R.id.subjectOfTheTeacher);
+            qualifiOfTheTeacher = itemView.findViewById(R.id.qualificationOfTheTeacher);
 
         }
     }
