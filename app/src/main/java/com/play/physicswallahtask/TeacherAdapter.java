@@ -47,7 +47,7 @@ public class TeacherAdapter extends RecyclerView.Adapter<TeacherAdapter.TeacherH
         return teachersList.size();
     }
 
-    public class TeacherHolder extends RecyclerView.ViewHolder {
+    public static class TeacherHolder extends RecyclerView.ViewHolder {
 
         ImageView pictureOfTeacher;
         TextView namingTeacher, subjOfTheTeacher, qualifiOfTheTeacher;

@@ -4,5 +4,6 @@
     <string name="qualification">Qualification</string>
     <string name="name">Name</string>
     <string name="viewMore">View More</string>
+    <string name="appBarName">Robby Darling</string>
     <string name="description">Profile Image of the Teacher</string>
 </resources>
